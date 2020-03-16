@@ -6,6 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>付小雪-前端工程师-个人简历</title>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <style type="text/css">
 html, body {
   height: 100%;
@@ -42,18 +45,38 @@ body, ul, li, a, p, div {padding: 0px; margin: 0px; font-size: 14px;}
 #page6 {
   background-image: linear-gradient(135deg, #81FBB8 10%, #28C76F 100%);
 }
+.el-col:empty:before{
+  content: '-';
+  color: transparent;
+}
 </style>
 </head>
 <body>
 <div id="wrap">
   <div id="main">
-    <div id="page1" class="page">个人简介</div>
+    <div id="page1" class="page">
+      <el-row style="padding-top: 10px;">
+        <el-col :span="8"></el-col>
+        <el-col :span="8" style="text-align: center">
+          <el-avatar :size="200" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+        </el-col>
+        <el-col :span="8"></el-col>
+      </el-row>
+    </div>
     <div id="page2" class="page">技术概况</div>
     <div id="page3" class="page">工作经历</div>
     <div id="page4" class="page">项目经验</div>
   </div>
 </div>
 </body>
+<script>
+new Vue({
+  el: '#wrap',
+  data: function () {
+    return {visible: false}
+  }
+})
+</script>
 <script type="text/javascript">
 var wrap = document.getElementById('wrap')
 var main = document.getElementById('main')
@@ -68,7 +91,8 @@ for (var i = 0; i < obj.length; i++) {
 //如果不加时间控制，滚动会过度灵敏，一次翻好几屏
 var startTime = 0, //翻屏起始时间
     endTime   = 0,
-    now       = 0
+    now       = 0,
+    page      = 0
 //浏览器兼容
 if ((navigator.userAgent.toLowerCase().indexOf('firefox') != -1)) {
   document.addEventListener('DOMMouseScroll', debounce(scrollFun, 300, true), false)
@@ -100,12 +124,17 @@ function touchFun(e) {
   } else if (Math.abs(X) > Math.abs(Y) && X < 0) {
     // alert('right 2 left')
   } else if (Math.abs(Y) > Math.abs(X) && Y > 0) {
-    now = now + hei
-    toPage(now)
+    if (page > 0) {
+      page--
+      now = now + hei
+      toPage(now)
+    }
   } else if (Math.abs(Y) > Math.abs(X) && Y < 0) {
-    now = now - hei
-    toPage(now)
-    // debounce(touchUp, 300, true)
+    if (page < 3) {
+      page++
+      now = now - hei
+      toPage(now)
+    }
   } else {
     // alert('just touch')
   }
@@ -116,14 +145,18 @@ function scrollFun(event) {
   var delta = event.detail || (-event.wheelDelta)
   var sfn
   if (delta > 0 && parseInt(main.offsetTop) > -(hei * 3)) {
-    //向下滚动
-    now = now - hei
-    toPage(now)
+    if (page < 3) {
+      page++
+      now = now - hei
+      toPage(now)
+    }
   }
   if (delta < 0 && parseInt(main.offsetTop) < 0) {
-    //向上滚动
-    now = now + hei
-    toPage(now)
+    if (page > 0) {
+      page--
+      now = now + hei
+      toPage(now)
+    }
   }
 }
 function toPage() {
