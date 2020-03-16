@@ -1207,11 +1207,15 @@ a:hover {
 }
 
 .tf-hero-text.tf-style1 h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
+  margin-top: -120px;
 }
-
+.tf-hero-text.tf-style1 h1 span{
+  font-size: 20px;
+  margin-left: 10px;
+}
 .tf-hero-text.tf-style1 b,
 .tf-hero-text.tf-style1 i {
   font-weight: inherit;
@@ -1222,6 +1226,7 @@ a:hover {
   font-size: 22px;
   line-height: 1.6em;
   margin-bottom: 40px;
+  width: 600px;
 }
 
 .tf-hero-text.tf-style1 {
@@ -1232,7 +1237,7 @@ a:hover {
   -o-transition-delay: 0.6s;
   transition-delay: 0.6s;
   padding-top: 20px;
-  z-index: 1
+  z-index: 1;
 }
 
 .tf-adjust-middle .tf-hero-text.tf-style1 {
