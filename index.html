@@ -25,22 +25,22 @@ body, ul, li, a, p, div {padding: 0px; margin: 0px; font-size: 14px;}
   margin: 0;
 }
 #page1 {
-  background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+  background-image: linear-gradient(135deg, #FDEB71 10%, #F8D800 100%);
 }
 #page2 {
-  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+  background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
 }
 #page3 {
-  background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+  background-image: linear-gradient(135deg, #CE9FFC 10%, #7367F0 100%);
 }
 #page4 {
-  background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+  background-image: linear-gradient(135deg, #90F7EC 10%, #32CCBC 100%);
 }
 #page5 {
-  background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+  background-image: linear-gradient(135deg, #FEB692 10%, #EA5455 100%);
 }
 #page6 {
-  background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+  background-image: linear-gradient(135deg, #81FBB8 10%, #28C76F 100%);
 }
 </style>
 </head>
@@ -79,6 +79,10 @@ if ((navigator.userAgent.toLowerCase().indexOf('firefox') != -1)) {
 } else {
   document.onmousewheel = debounce(scrollFun, 600, true)
 }
+document.addEventListener('touchstart', (e) => {
+  console.log('touchstart：手指按下时触发', e)
+  debounce(scrollFun, 300, true)
+})
 //滚动事件处理函数
 function scrollFun(event) {
   startTime = new Date().getTime()
