@@ -79,8 +79,7 @@ if ((navigator.userAgent.toLowerCase().indexOf('firefox') != -1)) {
 } else {
   document.onmousewheel = debounce(scrollFun, 600, true)
 }
-document.addEventListener('touchstart', (e) => {
-  console.log('touchstart：手指按下时触发', e)
+document.addEventListener('touchmove', (e) => {
   debounce(scrollFun, 300, true)
 })
 //滚动事件处理函数
