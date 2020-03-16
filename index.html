@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>付小雪-前端工程师-个人简历</title>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css">
+html, body {
+  height: 100%;
+}
+body, ul, li, a, p, div {padding: 0px; margin: 0px; font-size: 14px;}
+#wrap {
+  overflow: hidden;
+  width: 100%;
+}
+#main {
+  height: 2944px;
+  top: 0;
+  position: relative;
+}
+.page {
+  width: 100%;
+  margin: 0;
+}
+#page1 {
+  background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+}
+#page2 {
+  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+}
+#page3 {
+  background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+}
+#page4 {
+  background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="main">
+    <div id="page1" class="page">个人简介</div>
+    <div id="page2" class="page">技术概况</div>
+    <div id="page3" class="page">工作经历</div>
+    <div id="page4" class="page">项目经验</div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+var wrap = document.getElementById('wrap')
+var main = document.getElementById('main')
+var hei = document.body.clientHeight
+wrap.style.height = hei + 'px'
+var obj = document.getElementsByTagName('div')
+for (var i = 0; i < obj.length; i++) {
+  if (obj[i].className == 'page') {
+    obj[i].style.height = hei + 'px'
+  }
+}
+//如果不加时间控制，滚动会过度灵敏，一次翻好几屏
+var startTime = 0, //翻屏起始时间
+    endTime   = 0,
+    now       = 0
+//浏览器兼容
+if ((navigator.userAgent.toLowerCase().indexOf('firefox') != -1)) {
+  document.addEventListener('DOMMouseScroll', debounce(scrollFun, 300, true), false)
+} else if (document.addEventListener) {
+  document.addEventListener('mousewheel', debounce(scrollFun, 300, true), false)
+} else if (document.attachEvent) {
+  document.attachEvent('onmousewheel', debounce(scrollFun, 300, true))
+} else {
+  document.onmousewheel = debounce(scrollFun, 600, true)
+}
+//滚动事件处理函数
+function scrollFun(event) {
+  startTime = new Date().getTime()
+  var delta = event.detail || (-event.wheelDelta)
+  var sfn
+  if (delta > 0 && parseInt(main.offsetTop) > -(hei * 3)) {
+    //向下滚动
+    now = now - hei
+    toPage(now)
+  }
+  if (delta < 0 && parseInt(main.offsetTop) < 0) {
+    //向上滚动
+    now = now + hei
+    toPage(now)
+  }
+}
+function toPage() {
+  $('#main').animate({top: (now + 'px')}, 500)     //jquery实现动画效果
+  //setTimeout("main.style.top = now + 'px'",1000);     javascript 实现动画效果
+}
+function debounce(func, wait, immediate) {
+  let time
+  let debounced = function () {
+    let context = this
+    if (time) clearTimeout(time)
+    if (immediate) {
+      let callNow = !time
+      if (callNow) func.apply(context, arguments)
+      time = setTimeout(
+        () => {time = null} //见注解
+        , wait)
+    } else {
+      time = setTimeout(
+        () => {func.apply(context, arguments)}
+        , wait)
+    }
+  }
+  debounced.cancel = function () {
+    clearTimeout(time)
+    time = null
+  }
+  return debounced
+}
+</script>
+</html>
