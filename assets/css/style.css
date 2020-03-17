@@ -1226,7 +1226,7 @@ a:hover {
   font-size: 22px;
   line-height: 1.6em;
   margin-bottom: 40px;
-  width: 600px;
+  width: 400px;
 }
 
 .tf-hero-text.tf-style1 {
@@ -2291,6 +2291,7 @@ a:hover {
   display: block;
   position: relative;
   overflow: hidden;
+  height: 200px;
 }
 
 .tf-image:before {
