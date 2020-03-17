@@ -2289,7 +2289,7 @@ a:hover {
 
 .tf-image {
   display: block;
-  position: relative;
+  /*position: relative;*/
   overflow: hidden;
   height: 200px;
 }
@@ -4515,7 +4515,7 @@ blockquote {
   background-color: #fff;
   background-size: cover;
   height: 100%;
-  z-index: 9999999;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
