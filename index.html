@@ -91,9 +91,9 @@
               <ul class="tf-nav-list onepage-nav">
                 <li><a href="#home">INTRODUCTION</a></li>
                 <li><a href="#about">SKILLS</a></li>
-                <li><a href="#portfolio">PROJECT EXPERIENCE</a></li>
-                <li><a href="#service">WORK EXPERIENCE</a></li>
-                <li><a href="#team">TEAM</a></li>
+                <li><a href="#service">VUE</a></li>
+                <li><a href="#portfolio">THYMELEAF</a></li>
+                <li><a href="#H5">H5</a></li>
                 <li><a href="#price">PRICE</a></li>
                 <li><a href="#blog">BLOG</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -130,6 +130,11 @@
                   <el-tag effect="dark">SASS</el-tag>
                   <el-tag effect="dark">HTML5</el-tag>
                   <el-tag effect="dark">layerUI</el-tag>
+                </el-form-item>
+                <el-form-item label="FEATURE">
+                    <p>注重代码质量，追求精简，高效</p>
+                    <p>参与项目多且杂，经验丰富</p>
+                    <p>注重交互和体验，喜爱抠细节，乐于享受不断优化的过程。</p>
                 </el-form-item>
               </el-form>
             </div>
@@ -307,110 +312,20 @@
     <div class="tf-project-wrap tf-section-top" id="portfolio">
       <div class="container">
         <div class="tf-section-heading tf-style2 text-center">
-          <h2>Fore and aft end separation</h2>
+          <h2>混合开发(前后端不分离的项目)</h2>
           <div class="tf-seperator">
             <div class="tf-seperator-left-bar wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
             <img src="assets/img/light-img/seperator-icon.png" alt="" class="tf-seperator-icon">
             <div class="tf-seperator-right-bar wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
-          <p>This is a great place to tell people more about your services and peak <br>their interest. Last year our latest work album</p>
+          <p>Thymeleaf是用来开发Web和独立环境项目的服务器端的Java模版引擎,模板渲染的方式进行数据交互，穿插使用各种js插件，jq，layerUI等</p>
         </div>
       </div>
       <div class="tf-project tf-project-carousel owl-carousel tf-style1 tf-owl-controler1">
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="assets/img/light-img/project1.png">
+        <a v-for="(item,i) in javalist" :key="i" href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" :data-src="item.src" @click="src=item.src,visible=true">
           <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s" data-src="assets/img/light-img/project2.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s" data-src="assets/img/light-img/project3.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.35s" data-src="assets/img/light-img/project4.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="assets/img/light-img/project1.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s" data-src="assets/img/light-img/project2.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s" data-src="assets/img/light-img/project3.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.35s" data-src="assets/img/light-img/project4.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="assets/img/light-img/project1.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s" data-src="assets/img/light-img/project2.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s" data-src="assets/img/light-img/project3.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.35s" data-src="assets/img/light-img/project4.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="assets/img/light-img/project1.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s" data-src="assets/img/light-img/project2.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s" data-src="assets/img/light-img/project3.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
-          </div>
-        </a>
-        <a href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.35s" data-src="assets/img/light-img/project4.png">
-          <div class="tf-project-meta">
-            <h3>Project Title One</h3>
-            <span>Branding</span>
+            <h3>{{item.name}}</h3>
+            <span>{{item.desc}}</span>
           </div>
         </a>
       </div>
@@ -432,54 +347,18 @@
           <div class="col-lg-6">
             <div class="tf-section-heading tf-style2 tf-type2">
               <h2>Skills & Expertise</h2>
-              <p>A skill is the ability to carry out a task with determined results often within a given amount of time. Skill usually requires certain environmental stimuli and situations to assess. Skilled memory enables experts to rapidly encode, store, and retrieve information within the domain of their expertise.</p>
+              <p></p>
             </div>
             <div class="tf-progressbar-wrap">
-              <div class="tf-single-progressbar">
+              <div class="tf-single-progressbar" v-for="(item,i) in progress" :key="i">
                 <div class="tf-progressbar-meta">
-                  <h3 class="tf-progressbar-title">Web Development</h3>
-                  <div class="tf-progressbar-percentage">90%</div>
+                  <h3 class="tf-progressbar-title">{{item.name}}</h3>
+                  <div class="tf-progressbar-percentage">{{item.percent}}</div>
                 </div>
-                <div class="tf-progressbar" data-progress-percentage="90">
+                <div class="tf-progressbar" :data-progress-percentage="item.num">
                   <div class="tf-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
                 </div>
-              </div><!-- .tf-single-progressbar -->
-              <div class="tf-single-progressbar">
-                <div class="tf-progressbar-meta">
-                  <h3 class="tf-progressbar-title">Web Design</h3>
-                  <div class="tf-progressbar-percentage">95%</div>
-                </div>
-                <div class="tf-progressbar" data-progress-percentage="95">
-                  <div class="tf-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div><!-- .tf-single-progressbar -->
-              <div class="tf-single-progressbar">
-                <div class="tf-progressbar-meta">
-                  <h3 class="tf-progressbar-title">HTML / CSS</h3>
-                  <div class="tf-progressbar-percentage">85%</div>
-                </div>
-                <div class="tf-progressbar" data-progress-percentage="85">
-                  <div class="tf-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div><!-- .tf-single-progressbar -->
-              <div class="tf-single-progressbar">
-                <div class="tf-progressbar-meta">
-                  <h3 class="tf-progressbar-title">WordPress</h3>
-                  <div class="tf-progressbar-percentage">80%</div>
-                </div>
-                <div class="tf-progressbar" data-progress-percentage="80">
-                  <div class="tf-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div><!-- .tf-single-progressbar -->
-              <div class="tf-single-progressbar">
-                <div class="tf-progressbar-meta">
-                  <h3 class="tf-progressbar-title">Photoshop</h3>
-                  <div class="tf-progressbar-percentage">95%</div>
-                </div>
-                <div class="tf-progressbar" data-progress-percentage="95">
-                  <div class="tf-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div><!-- .tf-single-progressbar -->
+              </div>
             </div>
           </div>
         </div>
@@ -487,83 +366,25 @@
     </section>
     <!-- End Skill Section -->
     <!-- Start Team Section -->
-    <section class="tf-team-wrap tf-section" id="team">
+    <section class="tf-team-wrap tf-section" id="H5">
       <div class="container">
         <div class="tf-section-heading tf-style2 text-center">
-          <h2>Creative Team</h2>
+          <h2>H5混合开发</h2>
           <div class="tf-seperator">
             <div class="tf-seperator-left-bar wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
             <img src="assets/img/light-img/seperator-icon.png" alt="" class="tf-seperator-icon">
             <div class="tf-seperator-right-bar wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
-          <p>Team members need to learn how to help one another. A team becomes more <br>than just a collection of people when a strong sense.</p>
+          <p>手机端活动页，APP内嵌，微信分享，下载跳转等</p>
         </div>
       </div>
-      <div class="tf-owl-controler3-hover">
-        <div class="container">
-          <div class="tf-member-carousel owl-carousel tf-style2 tf-owl-controler3">
-            <div class="tf-team-member text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-              <div class="tf-member-img">
-                <img src="assets/img/light-img/team1.png" alt="">
-              </div>
-              <div class="tf-member-info">
-                <h3 class="tf-member-name">Rodney Artichoke</h3>
-                <div class="tf-member-designation">UI/UX Designer</div>
-                <ul class="tf-member-social-btn tf-flex tf-mp0">
-                  <li><a href="javascript:;"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-pinterest-square"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="tf-team-member text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
-              <div class="tf-member-img">
-                <img src="assets/img/light-img/team2.png" alt="">
-              </div>
-              <div class="tf-member-info">
-                <h3 class="tf-member-name">Aston Dark</h3>
-                <div class="tf-member-designation">Web Developer</div>
-                <ul class="tf-member-social-btn tf-flex tf-mp0">
-                  <li><a href="javascript:;"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-pinterest-square"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="tf-team-member text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-              <div class="tf-member-img">
-                <img src="assets/img/light-img/team3.png" alt="">
-              </div>
-              <div class="tf-member-info">
-                <h3 class="tf-member-name">Keir Preston</h3>
-                <div class="tf-member-designation">Business Advisor</div>
-                <ul class="tf-member-social-btn tf-flex tf-mp0">
-                  <li><a href="javascript:;"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-pinterest-square"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="tf-team-member text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.35s">
-              <div class="tf-member-img">
-                <img src="assets/img/light-img/team4.png" alt="">
-              </div>
-              <div class="tf-member-info">
-                <h3 class="tf-member-name">Criss Donald</h3>
-                <div class="tf-member-designation">Business Analysis</div>
-                <ul class="tf-member-social-btn tf-flex tf-mp0">
-                  <li><a href="javascript:;"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="javascript:;"><i class="fab fa-pinterest-square"></i></a></li>
-                </ul>
-              </div>
-            </div>
+      <div class="tf-project tf-project-carousel owl-carousel tf-style1 tf-owl-controler1">
+        <a v-for="(item,i) in h5list" :key="i" href="javascript:;" class="tf-single-project tf-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" :data-src="item.src" style="height: 500px" @click="src=item.src,visible=true">
+          <div class="tf-project-meta">
+            <h3>{{item.name}}</h3>
+            <span></span>
           </div>
-        </div>
+        </a>
       </div>
     </section>
     <!-- End Team Section -->
@@ -938,7 +759,7 @@
   </footer>
   <!-- End Footer Seciton -->
   <el-dialog title="图片展示" :visible.sync="this.visible" @close="visible=false" fullscreen>
-    <img :src="src" alt="">
+    <div style="text-align: center;"><img :src="src" alt=""></div>
   </el-dialog>
 </div>
 </body>
@@ -1050,6 +871,67 @@ new Vue({
             }
           ]
         }
+      ],
+      javalist: [
+        {
+          name: 'CRM系统',
+          desc: '工作台',
+          src: 'assets/img/java/crm1.png'
+        },
+        {
+          name: 'OA系统',
+          desc: '工作台',
+          src: 'assets/img/java/OA1.png'
+        },
+        {
+          name: 'OA系统',
+          desc: '角色权限',
+          src: 'assets/img/java/oa2.png'
+        },
+        {
+          name: 'OA系统',
+          desc: '人员信息',
+          src: 'assets/img/java/oa3.png'
+        },
+        {
+          name: '江寓门户',
+          desc: '门户首页',
+          src: 'assets/img/java/room1.png'
+        }
+      ],
+      progress: [
+        {
+          name: 'VUE / Webpack / element / layUi',
+          percent: '95%',
+          num: 95
+        },
+        {
+          name: 'HTML5 / CSS3 / LESS / SASS',
+          percent: '95%',
+          num: 95
+        },
+        {
+          name: 'Thymeleaf',
+          percent: '80%',
+          num: 80
+        },
+        {
+          name: 'Photosho / AI',
+          percent: '70%',
+          num: 70
+        },
+        {
+          name: 'React / Angular',
+          percent: '50%',
+          num: 50
+        }
+      ],
+      h5list:[
+        {name:'',src:'assets/img/vue/h54.png'},
+        {name:'',src:'assets/img/vue/h51.png'},
+        {name:'',src:'assets/img/vue/h52.png'},
+        {name:'',src:'assets/img/vue/h6.png'},
+        {name:'',src:'assets/img/vue/h53.png'}
       ]
     }
   },
