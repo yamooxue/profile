@@ -1223,10 +1223,10 @@ a:hover {
 }
 
 .tf-hero-text.tf-style1 .tf-hero-subtitle {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.6em;
-  margin-bottom: 40px;
-  width: 500px;
+  margin-bottom: 20px;
+  max-width: 500px;
 }
 
 .tf-hero-text.tf-style1 {
@@ -2128,7 +2128,7 @@ a:hover {
 }
 
 .tf-section-heading.tf-style1 h2 {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -2217,6 +2217,7 @@ a:hover {
 ----------------------------------------------------------------*/
 .tf-about-text p {
   margin-bottom: 17px;
+  font-size: 14px;
 }
 
 .tr-list {
@@ -3283,7 +3284,7 @@ a:hover {
   }
 
   .tf-hero-slide.tf-style1 {
-    height: 600px;
+    /*height: 600px;*/
   }
 
   .tf-header.tf-style1 .tf-main-header-in {
